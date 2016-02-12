@@ -7,23 +7,18 @@ public class Ejer2 {
 
 	public static void main(String[] args){
 
+			Scanner lector=new Scanner (System.in);
+			double ladoA, ladoB, hipotenusa;
+                        
+			System.out.println("digite el lado A:");
+			ladoA=lector.nextDouble();
+			System.out.println("digite el ladoB");
+			ladoB=lector.nextDouble();
 
-		// declaracion de variables
-	int lado; 
-	double volumen, area;
-	Scanner lector = new Scanner(System.in); //defino el lector
+			hipotenusa=Math.sqrt(ladoA*ladoA+Math.pow(ladoB,2));
 
-	// entrada de datos
-	System.out.println("digite el lado del cubo:");
-	lado=lector.nextInt();
-
-	//proceso de datos
-	volumen = Math.pow(lado, 3);
-	area=Math.pow (lado, 2);
-
-	//salida de datos
-	System.out.println("el area es igual a: "+area+" y el volumen es igual a:"+volumen);
+			System.out.println("el valor de la hipotenusa es:"+hipotenusa);
         }
 
 }
-}
+
