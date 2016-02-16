@@ -1,7 +1,8 @@
-// 4. Desarrollar un programa que calcule la nota definitiva de un estudiante 
-// en una asignatura, se sabe que durante el semestre académico se manejan 
-// tres notas con sus respectivos porcentajes así: seguimiento (50%), 
-// parcial I (25%) y parcial 2 (25%).
+/*4. Desarrollar un programa que calcule la nota definitiva de un estudiante 
+en una asignatura, se sabe que durante el semestre académico se manejan 
+ tres notas con sus respectivos porcentajes así: seguimiento (50%), 
+parcial I (25%) y parcial 2 (25%).*/
+
 package ejer4;
 import java.util.Scanner;//paquete
 
