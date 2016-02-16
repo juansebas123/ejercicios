@@ -1,6 +1,8 @@
 
 package ejer2;
 
+//2. Escriba un algoritmo que permita calcular la hipotenusa de un triángulo 
+//rectángulo utilizando el teorema de Pitágoras.
 import java.util.Scanner;//paquete
 
 public class Ejer2 {
