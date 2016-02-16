@@ -13,50 +13,35 @@ public class Ejer7 {
 	public static void main(String[] args){
             
             Scanner lector=new Scanner (System.in);
-            int cantidad,nacimiento,sexo,registro, edad;
-            int portmenores,portfemenino, portmedellin;
+            double accidentes,yearnac, sexo, ciudad,contMen25=0, contFem=0, contFuera=0;
+            double porcContMEn25, porcContFem, porcContFuera;
             
-            System.out.println("Conductores a ingresar:");
-            cantidad=lector.nextInt();
-            for (int i=0;i<cantidad;i++)
+            System.out.println("digite el numero de accidentes:");
+            accidentes=lector.nextInt();//100
+            
+            for (int i=0;i<accidentes;i++)
             {
-                System.out.println("conductor"+(i+1));
-                System.out.println("año de nacimiento");
-                nacimiento=lector.nextInt();
-                do{
-                    System.out.println("Sexo 1 o 2 (1=Femenino, 2=Masculino):");
-                    sexo=lector.nextInt();
-                }
-                while (sexo==1 || sexo==2);
+                System.out.println("digite el año de nacimeitno");
+                yearnac=lector.nextInt();
+                if (2016 - yearnac < 25)
+                    contMen25++; // contMen25=contmen+1
+                
+                System.out.println("digite el el sexo: 1 femenino, 2 masculino");
+                sexo=lector.nextInt();
+                if (sexo==1)
+                    contFem++; 
+                
+                System.out.println("digite el registro del carro: 1 medellin, 2 otra ciudad");
+                ciudad=lector.nextInt();
+                if (ciudad == 2)
+                    contFuera++;
             }
+            porcContMEn25=contMen25/accidentes*100;
+            porcContFem=contFem/accidentes*100;
+            porcContFuera=contFuera/accidentes*100;
             
-            System.out.println("Inserte la edad: "); 
-            edad=lector.nextInt();
-            do{
-                System.out.println("Opciones de registro: \n1.- Medellin\n2.- Otro\nInserte el numero de su opcion: "); 
-                registro=lector.nextInt();
-            }
-            while (registro==1 || registro==2);
-        }
-for( i=0; i<cantidad; i++)
-{
-if(edad<25)
-{
-portmenores= portmenores+1;
-}
-if(b[i].sexo==2){
-portfemenino=portfemenino+1;
-}
-if(b[i].registro==2){
-medellin=medellin+1;
-} 
-System.out.println("PORCENTAJES DE CONDUCTORES\n");
-System.out.println("Menores a 25 años: %0.2f",(porcentaje_men*100)/cantidad);
-System.out.println("\nFemeninos: %0.2f",(porcentaje_fem*100)/cantidad);
-System.out.println("\nMasculinos: %0.2f",(porcentaje_mas*100)/cantidad);
-System.out.println("\nCon registro fuera de Medallin: %0.2f",(porcentaje_fue*100)/cantidad);
-
-        
-
-}
+            System.out.println("el porcentaje de menores de 25 es: "+porcContMEn25+
+                    "\nel porcentaje de femenimo es: "+porcContFem+
+                    "\nel porcentaje de carros de afuera es: " +porcContFuera);
+        }   
 }
