@@ -27,5 +27,4 @@ public class Ejer3 {
         System.out.println("la altura es: "+altura);
         System.out.println("el area es: "+area);
         }
-
 }
