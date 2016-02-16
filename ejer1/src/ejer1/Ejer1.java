@@ -1,4 +1,4 @@
-//Desarrolle un algoritmo que permita calcular el volumen y el área de un cubo
+//1.Desarrolle un algoritmo que permita calcular el volumen y el área de un cubo
 package ejer1;
 
 import java.util.Scanner;//paquete
