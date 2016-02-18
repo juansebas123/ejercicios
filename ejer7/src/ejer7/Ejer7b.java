@@ -8,7 +8,7 @@ public class Ejer7b {
 	public static void main(String[] args){
             
             Scanner lector=new Scanner (System.in);
-            double accidentes, yearnac, sexo, ciudad,contMen25=0, contFem=0, contFuera=0;
+            double accidentes = 0, yearnac, sexo, ciudad,contMen25=0, contFem=0, contFuera=0;
             double porcContMEn25, porcContFem, porcContFuera;
             int opcion;        
             
@@ -40,8 +40,6 @@ public class Ejer7b {
             System.out.println("el porcentaje de menores de 25 es: "+porcContMEn25+
                     "\nel porcentaje de femenimo es: "+porcContFem+
                     "\nel porcentaje de carros de afuera es: " +porcContFuera);
-            
-            
         }   
 }
 
