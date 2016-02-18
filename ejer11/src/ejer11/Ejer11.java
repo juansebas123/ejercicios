@@ -1,4 +1,5 @@
-//10. Leer un número de dos dígitos y determinar si pertenece a la serie de F
+//Leer un número y calcularle el factorial a todos los enteros comprendidos entre 1 y el número
+//y el número leído.
 
 package ejer11;
 
