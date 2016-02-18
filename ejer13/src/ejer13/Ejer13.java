@@ -10,56 +10,44 @@ import java.util.Scanner;//paquete
 public class Ejer13 {
 
 	public static void main(String[] args){
-           
-            Scanner lector=new Scanner (System.in);
-            double porcentaje1, porcentaje2, porcentaje3, porcentaje4, cont1por25=0, cont2por20=0;
-            double estudiantes,pronota, cont3por25=0, cont4por30=0, notaf=0;
-            double contnotaf = 0, j, sum = 0, prom;
-            
-            System.out.println("digite numero de estudiantes: ");
-            estudiantes=lector.nextInt();//100
-            
-            for (int i=0;i<estudiantes;i++)
-            {
-                System.out.println("digite nota parcial 1: ");
-                porcentaje1=lector.nextInt();
-                if (porcentaje1 < 3)
-                    cont1por25++; // contMen25=contmen+1
-                
-                System.out.println("digite nota parcial 2: ");
-                porcentaje2=lector.nextInt();
-                if (porcentaje2 < 3)
-                    cont2por20++; 
-                
-                System.out.println("digite nota parcial 3: ");
-                porcentaje3=lector.nextInt();
-                if (porcentaje3 < 3)
-                    cont3por25++;
-                    
-                System.out.println("digite nota parcial 4: ");
-                porcentaje4=lector.nextInt();
-                if (porcentaje4 < 3)
-                    cont4por30++;
-                
-                notaf=porcentaje1*0.25+porcentaje2*0.20+porcentaje3*0.25+porcentaje3*0.30;
-                System.out.println("la nota definitiba del estudiante es: "+notaf);
-               
-                if(notaf<3);
-                    contnotaf++;
 
-            }
-            
-             if(j=1; j<=notaf; j++);
-                sum=sum+nota[j];
+        Scanner sc = new Scanner(System.in);
+        int numAlum, i;
+        double suma = 0, media;
+
+        //Lectura del número de alumnos. Debe ser un valor positivo
+        do {
+            System.out.print("Número de alumnos de la clase: ");
+            numAlum = sc.nextInt();
+        } while (numAlum <= 0);
+
+        //se crea un array llamado notas de numAlumn elementos de tipo double
+        double[] notas = new double[numAlum]; 
         
-                System.out.println("\npromedio estudiantes"+sum+"\n");
-            
-            System.out.println("\nperdieron "+contnotaf+" estudiantes esta materia\n");
-            
-            pronota=cont1por25+cont2por20+cont3por25+cont4por30;
-                System.out.println("la nota definitiba del estudiante es: "+pronota);
-                 
-            
-           
-        }   
+        // Entrada de datos. Se lee la nota de cada alummo y se guarda
+        // en cada elemento del array
+        for (i = 0; i < notas.length; i++) {
+            System.out.print("Alumno " + (i + 1) + " Nota final: ");
+            notas[i] = sc.nextDouble();
+        }
+
+        // Sumar todas las notas
+        for (i = 0; i < notas.length; i++) {
+            suma = suma + notas[i];
+        }
+
+        // Calcular la media
+        media = suma / notas.length;
+
+        // Mostrar la media
+        System.out.printf("Nota media del curso: %.2f %n", media);
+
+        // Mostrar los valores superiores a la media
+        System.out.println("Listado de notas superiores a la media: ");
+        for (i = 0; i < notas.length; i++) {
+            if (notas[i] > media) {
+                System.out.println("Alumno numero " + (i + 1)+ " Nota final: " + notas[i]);
+            }
+        }
+    }
 }
