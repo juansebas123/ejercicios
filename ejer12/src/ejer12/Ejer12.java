@@ -10,7 +10,7 @@ import java.util.Scanner;//paquete
 public class Ejer12 {
 
         
-        @SuppressWarnings("empty-statement")
+        
 	public static void main(String[] args){
            
             Scanner lector=new Scanner (System.in);
