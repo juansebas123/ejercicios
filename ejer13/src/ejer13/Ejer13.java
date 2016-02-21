@@ -1,15 +1,10 @@
- /*En un curso se practican 4 evaluaciones con los siguientes porcentajes: 25%, 20%, 25% y
-30%. Para cada estudiante se informa el código y las 4 notas. Hacer un programa que calcule
-la nota definitiva de cada estudiante, el promedio de notas definitivas del curso y el
-porcentaje de perdedores. Sugerencia:*/
-
 package ejer13;
 
 import java.util.Scanner;//paquete
 
 public class Ejer13 {
 
-	public static void main(String[] args){
+    public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         int numAlum, i;
@@ -22,8 +17,8 @@ public class Ejer13 {
         } while (numAlum <= 0);
 
         //se crea un array llamado notas de numAlumn elementos de tipo double
-        double[] notas = new double[numAlum]; 
-        
+        double[] notas = new double[numAlum];
+
         // Entrada de datos. Se lee la nota de cada alummo y se guarda
         // en cada elemento del array
         for (i = 0; i < notas.length; i++) {
@@ -46,7 +41,7 @@ public class Ejer13 {
         System.out.println("Listado de notas superiores a la media: ");
         for (i = 0; i < notas.length; i++) {
             if (notas[i] > media) {
-                System.out.println("Alumno numero " + (i + 1)+ " Nota final: " + notas[i]);
+                System.out.println("Alumno numero " + (i + 1) + " Nota final: " + notas[i]);
             }
         }
     }
