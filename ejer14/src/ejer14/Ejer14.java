@@ -13,7 +13,9 @@ public class Ejer14 {
 
         Scanner lector = new Scanner(System.in);
         circulo circ = new circulo(); // cree un nuevo objeto
-        triangulo trian = new triangulo();
+        triangulo trian = new triangulo(); 
+        cuadrado cuad = new cuadrado();
+        rectangulo rect = new rectangulo();
         double area, radio, valor1, valor2;
         int opcion;
 
@@ -44,12 +46,22 @@ public class Ejer14 {
                     trian.calcularArea();
                     System.out.println("el valor del area es" + trian.getArea());
                     break;
- 
                 case 3:
-
+                    System.out.println("ingrese el valor del lado:");
+                    valor1 = lector.nextDouble();
+                    cuad.setValor1(valor1);
+                    cuad.calcularArea();
+                    System.out.println("el valor del area es" + cuad.getArea());
                     break;
                 case 4:
-
+                    System.out.println("ingrese el valor de un lado:");
+                    valor1 = lector.nextDouble();
+                    rect.setValor1(valor1);
+                    System.out.println("ingrese el valor del otro lado:");
+                    valor2 = lector.nextDouble();
+                    rect.setValor2(valor2);
+                    rect.calcularArea();
+                    System.out.println("el valor del area es" + rect.getArea());
                     break;
             }
         } while (opcion != 5);
