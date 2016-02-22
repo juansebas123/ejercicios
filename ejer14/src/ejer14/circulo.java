@@ -1,8 +1,6 @@
 
 package ejer14;
 
-import java.util.Scanner;//paquete
-
 public class circulo {
     
     private double area, radio;
