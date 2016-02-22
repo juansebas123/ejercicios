@@ -1,7 +1,6 @@
 
 package ejer14;
 
-import java.util.Scanner;//paquete
 
 public class triangulo {
 
