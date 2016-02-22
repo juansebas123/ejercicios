@@ -22,7 +22,7 @@ public class Figuras {
         valor1 = lector.nextDouble();
         System.out.println("ingrese el valor de la altura: ");
         valor2 = lector.nextDouble();
-        area = valor1 * valor1 / 2;
+        area = valor1 * valor2 / 2;
         System.out.println("el area del triangulo es: " + area);
     }
 
