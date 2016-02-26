@@ -9,7 +9,7 @@ public class Solucionpractica {
         PersonalData Datos[] = new PersonalData[100];// almacena 100 personas
         Scanner lector = new Scanner(System.in);
         int opc = 0, contUs = 0, bandera=0; //conus nos merpite ssaber cuantos usuarios hay en el sistema
-        String name; // variabl para actualizar, buscar , eliminar
+        String name; // variabl para actualizar, buscar , eliminar.
 
         do {
             System.out.println("menu principal");
