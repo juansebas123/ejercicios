@@ -1,4 +1,4 @@
-package Solucionlab1;
+package solucionlab1;
 
 import java.util.Scanner;
 
@@ -84,4 +84,4 @@ public class Solucionlab1 {
 
 }
     
-}
+
