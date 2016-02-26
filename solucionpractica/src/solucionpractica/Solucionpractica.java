@@ -8,7 +8,8 @@ public class Solucionpractica {
         //almacena una persona: PersonalData Datos = new PersonalData();)
         PersonalData Datos[] = new PersonalData[100];// almacena 100 personas
         Scanner lector = new Scanner(System.in);
-        int opc = 0, contUs = 0; //conus nos merpite ssaber cuantos usuarios hay en el sistema
+        int opc = 0, contUs = 0, bandera=0; //conus nos merpite ssaber cuantos usuarios hay en el sistema
+        String name; // variabl para actualizar, buscar , eliminar
 
         do {
             System.out.println("menu principal");
@@ -23,7 +24,7 @@ public class Solucionpractica {
             switch (opc) {
                 case 1:
                     if (contUs < 99) {
-                        Datos[contUs]= new PersonalData();
+                        Datos[contUs] = new PersonalData();
                         System.out.print("Ingreso de usuarios");
                         System.out.print("digite el nombre del usuaio ");
                         Datos[contUs].setNombre(lector.next());
@@ -46,7 +47,25 @@ public class Solucionpractica {
 
                     break;
                 case 2:
-
+                    System.out.println("actualizar datos");
+                    System.out.println("Digite le nombre para actualizar  ");
+                    name = lector.next();
+                    for (int i = 0; 1 < contUs; i++) {
+                        if (name.equals(Datos[i].getNombre())) {
+                            bandera=1;
+                            System.out.print("Digite direccion: ");
+                            Datos[i].setDireccion(lector.next());
+                            System.out.print("Digite telefono: ");
+                            Datos[i].setTelefono(lector.next());
+                            System.out.print("Digite areas: \n.1.quimica, fisica, tecnologia, calculo o programacion: ");
+                            Datos[i].setAreas(lector.next());
+                        }
+                    }
+                    if (bandera==0)
+                        System.out.print("\nusuario no encontrado");
+                    else
+                        bandera=0;
+                        
                     break;
                 case 3:
                     break;
